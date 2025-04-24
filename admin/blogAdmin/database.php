@@ -6,7 +6,6 @@ class Database
   private $username;
   private $password;
   private $database;
-  private $port;
 
   public function connect()
   {
@@ -15,9 +14,8 @@ class Database
     $this->username = $env_username;
     $this->password = $env_password;
     $this->database = $env_database;
-    $this->port = $env_port;
     
-    $conn = new mysqli($this->server, $this->username, $this->password, $this->database, $this->port);
+    $conn = new mysqli($this->server, $this->username, $this->password, $this->database,);
     return $conn;
   }
 }

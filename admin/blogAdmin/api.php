@@ -3,11 +3,8 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
     include_once './database.php';
-    include_once './posts.php';
-    include_once '../../events/eventPost.php';
     include_once './forms.php';
 
-include_once '../../mail.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
 function read()
